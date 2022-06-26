@@ -7,6 +7,7 @@ In this notebook I assamble a dataset and train a custom YOLOv5 model to recogni
 The project and Notebook is divided in two parts:
 
 1) EDA
+
 ->> here is where I run a small EDA to undestand the data of % of bad parkings in the city of Milan and to decide if was worth to develop the project on this city (Milan).
 
 2) MODEL
