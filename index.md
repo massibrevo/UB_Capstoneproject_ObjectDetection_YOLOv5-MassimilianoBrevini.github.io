@@ -5,6 +5,8 @@ This project has been developed in agreement with Voi Technology. S.L.; the tool
 In this notebook I assamble a dataset and train a custom YOLOv5 model to recognise Voi e-scooters parked in the streets of Milan.
 
 The project and Notebook is divided in two parts:
+<img width="327" alt="Screenshot 2022-06-26 at 18 58 02" src="https://user-images.githubusercontent.com/62722611/175826972-99a90c5c-e84d-4bcc-b8b2-6e50c410b687.png">
+
 
 ## EDA
 ->> here is where I run a small EDA to undestand the data of % of bad parkings in the city of Milan and to decide if was worth to develop the project on this city (Milan).
