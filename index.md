@@ -1,37 +1,33 @@
-## Welcome to GitHub Pages
+## UB Capstoneproject YOLOv5
 
-You can use the [editor on GitHub](https://github.com/massibrevo/UB_Capstoneproject_ObjectDetection_YOLOv5-MassimilianoBrevini.github.io/edit/gh-pages/index.md) to maintain and preview the content for your website in Markdown files.
+This project has been developed in agreement with Voi Technology. S.L.; the tools and frameworks used have been previously agreed by both university and the company.
 
-Whenever you commit to this repository, GitHub Pages will run [Jekyll](https://jekyllrb.com/) to rebuild the pages in your site, from the content in your Markdown files.
+In this notebook I assamble a dataset and train a custom YOLOv5 model to recognise Voi e-scooters parked in the streets of Milan.
 
-### Markdown
+The project and Notebook is divided in two parts:
 
-Markdown is a lightweight and easy-to-use syntax for styling your writing. It includes conventions for
+# EDA
+->> here is where I run a small EDA to undestand the data of % of bad parkings in the city of Milan and to decide if was worth to develop the project on this city (Milan).
 
-```markdown
-Syntax highlighted code block
+# MODEL
+I’ve labelled and annotate 760 pictures from Milan users end ride parking photos, using Roboflow software.
 
-# Header 1
-## Header 2
-### Header 3
+I’ve annotate them with 4 adifferent labels: rack_bicycle rack_general scooter whitelines
 
-- Bulleted
-- List
+I've used Roboflow software also to run different experiments and finally I used the following TRAINING OPTION CONFIGURATION:
 
-1. Numbered
-2. List
+## Split the dataset
+70% TRAIN 20% VALIDATION 10% TEST
 
-**Bold** and _Italic_ and `Code` text
+## Preprocessing:
+Auto-Orient --> Discard EXIF rotations and standardize pixel ordering. Resize --> Downsize images for smaller file sizes and faster training.
 
-[Link](url) and ![Image](src)
-```
+## Augmentation:
+- Crop --> (0 - 10%) Add variability to positioning and size to help model be more resilient to subject translations and camera position.
+- Rotation --> (0 - 15`) Add variability to rotations to help model be more resilient to camera roll.
+- Brightness --> (0 - 10%) Add variability to image brightness to help your model be more resilient to lighting and camera setting changes.
+- Exposure --> (0 - 7%) Add variability to image brightness to help model be more resilient to lighting and camera setting changes.
+- Mosaic --> to perform better on small objects (racks + whitelines).
 
-For more details see [Basic writing and formatting syntax](https://docs.github.com/en/github/writing-on-github/getting-started-with-writing-and-formatting-on-github/basic-writing-and-formatting-syntax).
-
-### Jekyll Themes
-
-Your Pages site will use the layout and styles from the Jekyll theme you have selected in your [repository settings](https://github.com/massibrevo/UB_Capstoneproject_ObjectDetection_YOLOv5-MassimilianoBrevini.github.io/settings/pages). The name of this theme is saved in the Jekyll `_config.yml` configuration file.
-
-### Support or Contact
-
-Having trouble with Pages? Check out our [documentation](https://docs.github.com/categories/github-pages-basics/) or [contact support](https://support.github.com/contact) and we’ll help you sort it out.
+## Training:
+--img 416 --batch 16 --epochs 150 weights: specify a path to weights to start transfer learning from. Here we choose the generic COCO pretrained checkpoint. Attached Output Metrics, Train curve Voi zip (containing labelled pictures) best (1) - weights to be used for transfer learning
