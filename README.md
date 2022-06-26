@@ -1,7 +1,7 @@
 # UB_Capstoneproject_ObjectDetection_YOLOv5-MassimilianoBrevini
 In this notebook I assamble a dataset and train a custom YOLOv5 model to recognise Voi e-scooters parked in the streets of Milan.
 
-I’ve labelled 760 pictures from original artifact with Milan parking photos (BAD/GOOD_PARKING, BAD_PHOTO)
+I’ve labelled 760 pictures from original artifact with Milan users end ride parking photos.
 
 ->> I’ve annotate them with 4 adifferent labels:
 rack_bicycle
