@@ -12,7 +12,7 @@ The project and Notebook is divided in two parts:
 
 2) MODEL
 
---> I’ve labelled and annotate 760 pictures from Milan users end ride parking photos, using Roboflow software.
+->> I’ve labelled and annotate 760 pictures from Milan users end ride parking photos, using Roboflow software.
 
 ->> I’ve annotate them with 4 adifferent labels:
 rack_bicycle
