@@ -1,13 +1,25 @@
 # UB_Capstoneproject_ObjectDetection_YOLOv5-MassimilianoBrevini
+
+This project has been developed in agreement with Voi Technology. S.L.; the tools and frameworks used have been previously agreed by both university and company.
+
 In this notebook I assamble a dataset and train a custom YOLOv5 model to recognise Voi e-scooters parked in the streets of Milan.
 
-I’ve labelled 760 pictures from original artifact with Milan users end ride parking photos.
+The project and Notebook is divided in two parts:
+
+1) EDA
+->> here is where I run a small EDA to undestand the data of % of bad parkings in the city of Milan and to decide if was worth to develop the project on this city (Milan).
+
+2) MODEL
+
+--> I’ve labelled and annotate 760 pictures from Milan users end ride parking photos, using Roboflow software.
 
 ->> I’ve annotate them with 4 adifferent labels:
 rack_bicycle
 rack_general
 scooter
 whitelines
+
+I've used Roboflow software also to run different experiments and finally I used the following TRAINING OPTION CONFIGURATION:
 
 ->> Split the dataset into (70%-20%-10%)
 
@@ -29,4 +41,3 @@ Attached Output
 Metrics, Train curve
 Voi zip (containing labelled pictures)
 best (1) - weights to be used for transfer learning
-ex. output test pictures
