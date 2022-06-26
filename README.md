@@ -1,6 +1,6 @@
 # UB_Capstoneproject_ObjectDetection_YOLOv5-MassimilianoBrevini
 
-This project has been developed in agreement with Voi Technology. S.L.; the tools and frameworks used have been previously agreed by both university and company.
+This project has been developed in agreement with Voi Technology. S.L.; the tools and frameworks used have been previously agreed by both university and the company.
 
 In this notebook I assamble a dataset and train a custom YOLOv5 model to recognise Voi e-scooters parked in the streets of Milan.
 
